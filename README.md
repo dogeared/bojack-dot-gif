@@ -1,5 +1,20 @@
-Star Wars DOT Gif
+Bojack DOT Gif
 -------------
+
+This is a fork of the excellent [star wars dot gif project](https://github.com/LindseyB/starwars-dot-gif).
+
+Without the work of [LindseyB](https://github.com/LindseyB), this version would not be possible!
+
+First, I am a mad fan of [Bojack Horseman](http://www.imdb.com/title/tt3398228/).
+
+I thought it would be awesome to have an animated gif with subtitles from the four seasons of the show.
+
+You can follow [@BojackDotGif](https://twitter.com/BojackDotGif) on twitter.
+
+I had to do some customizations of the original code as it focused on four Star Wars movies.
+
+This version focuses on 48 episodes across 4 seasons. I will update the instructions here and do a blog
+post on the customizations soon.
 
 ### To Use
 Copy the contents of ```config.cfg.example``` into ```config.cfg``` and make sure to change the paths for VLC and the Star Wars episodes. Any format that can be read by VLC should be acceptable for the movies. Note, if you don't plan on running the twitter bot you only need to fill out the general section of the cfg file. 

@@ -25,10 +25,17 @@ OAUTH_TOKEN_SECRET = config.get("twitter", "oauth_token_secret")
 headers = {"Authorization": "Client-ID " + CLIENT_ID}
 url = "https://api.imgur.com/3/upload.json"
 
+episodes = [
+	101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112,
+	201, 202, 203, 204, 205, 206, 207, 208, 209, 210, 211, 212,
+	301, 302, 303, 304, 305, 306, 307, 308, 309, 310, 311, 312,
+	401, 402, 403, 404, 405, 406, 407, 408, 409, 410, 411, 412
+]
+
 while True:
 	while True:
 		try:
-			quote = makeGif(random.randint(5,7), 0, rand=True, no_quote=False)
+			quote = makeGif(random.choice(episodes), 0, rand=True, no_quote=False)
 			quote = ' '.join(quote)
 		except:
 			continue
@@ -110,7 +117,7 @@ while True:
 	if len(quote) == 0:
 		quote = "..."
 
-	status = '"' + quote + '" ' + link + ' #starwarsgif'
+	status = '"' + quote + '" ' + link + ' #bojackgif'
 
 	print "tweeting..."
 	try:
