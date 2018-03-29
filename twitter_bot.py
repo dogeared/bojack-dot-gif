@@ -87,8 +87,8 @@ while True:
 				'key': API_KEY,
 				'image': b64encode(open('star_wars.gif', 'rb').read()),
 				'type': 'base64',
-				'name': 'star_wars.gif',
-				'title': 'Star Wars Dot Gif'
+				'name': 'bojack.gif',
+				'title': 'Bojack Dot Gif'
 			}
 		)
 	except (requests.exceptions.ConnectionError, OpenSSL.SSL.SysCallError):
