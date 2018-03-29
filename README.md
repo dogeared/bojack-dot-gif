@@ -11,7 +11,7 @@ I thought it would be awesome to have an animated gif with subtitles from the fo
 
 You can follow [@BojackDotGif](https://twitter.com/BojackDotGif) on twitter.
 
-I had to do some customizations of the original code as it focused on four Star Wars movies.
+I had to do some customizations of the original code as it focused on 4 Star Wars movies.
 
 This version focuses on 48 episodes across 4 seasons. I will update the instructions here and do a blog
 post on the customizations soon.
