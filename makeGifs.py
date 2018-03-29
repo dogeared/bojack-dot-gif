@@ -144,18 +144,19 @@ def makeGif(source, sub_index, rand=False, no_quote=False, custom_subtitle="", f
   else:
     start = str(start).replace(',', '.')
     end   = str(end).replace(',', '.')
-    subprocess.call([ffmpeg,
-      '-i',
-      video_path,
-      '-ss',
-      start,
-      '-t',
-      end,
-      screencap_path + '/thumb%05d.png'
-      ])
+    subprocess.call("sleep1 ; ffmpeg -i %s -ss %s -t %s %s" %(video_path, start, end, screencap_path + '/thumb%05d.png'), shell=True)
+    # subprocess.call([ffmpeg,
+    #   '-i',
+    #   video_path,
+    #   '-ss',
+    #   start,
+    #   '-t',
+    #   end,
+    #   screencap_path + '/thumb%05d.png'
+    #   ])
 
 
-    file_names = sorted((fn for fn in os.listdir(screencap_path)))
+  file_names = sorted((fn for fn in os.listdir(screencap_path)))
   images = []
 
   font = ImageFont.truetype("fonts/DejaVuSansCondensed-BoldOblique.ttf", 16)
@@ -216,7 +217,6 @@ def makeGif(source, sub_index, rand=False, no_quote=False, custom_subtitle="", f
     except IOError:
       print 'empty frame found.'
 
-
   # create a fuckin' gif
   print "generating gif..."
   writeGif(filename, images)
@@ -230,8 +230,13 @@ def makeGif(source, sub_index, rand=False, no_quote=False, custom_subtitle="", f
 
 if __name__ == '__main__':
 	parser = argparse.ArgumentParser()
-	parser.add_argument('--episodes', type=int, metavar="EPISODE", nargs='*', default=[4,5,6,7],
-						help='episode numbers, space-separated (default: 4 5 6 7)')
+	parser.add_argument('--episodes', type=int, metavar="EPISODE", nargs='*', default=[
+        101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112,
+        201, 202, 203, 204, 205, 206, 207, 208, 209, 210, 211, 212,
+        301, 302, 303, 304, 305, 306, 307, 308, 309, 310, 311, 312,
+        401, 402, 403, 404, 405, 406, 407, 408, 409, 410, 411, 412
+    ],
+    help='episode numbers, space-separated')
 
 	group = parser.add_mutually_exclusive_group()
 	group.add_argument('--random', dest='index', action='store_false',

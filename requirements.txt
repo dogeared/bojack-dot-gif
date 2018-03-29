@@ -1,6 +1,6 @@
 urwid
 pysrt
 numpy
-pillow
+pillow==2.8.2
 twython
 python-tumblpy
